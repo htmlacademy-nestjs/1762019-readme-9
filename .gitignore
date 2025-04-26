@@ -1,5 +1,6 @@
 .vscode/
-/node_modules/
+.nx/
+*/node_modules/
 /build/
 /lib/
 /dist/
