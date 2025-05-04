@@ -41,6 +41,7 @@
   },
   "workspaces": [
     "apps/*",
-    "libs/shared/core"
+    "libs/shared/core",
+    "libs/shared/helpers"
   ]
 }
