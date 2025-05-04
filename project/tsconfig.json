@@ -32,6 +32,9 @@
     },
     {
       "path": "./apps/bff"
+    },
+    {
+      "path": "./libs/shared/core"
     }
   ]
 }
