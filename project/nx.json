@@ -22,7 +22,8 @@
           "buildDepsName": "build-deps",
           "watchDepsName": "watch-deps"
         }
-      }
+      },
+      "exclude": ["libs/user/authentication/*", "libs/user/blog-user/*"]
     },
     {
       "plugin": "@nx/webpack/plugin",
@@ -38,6 +39,15 @@
       "plugin": "@nx/eslint/plugin",
       "options": {
         "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "include": ["libs/user/authentication/*", "libs/user/blog-user/*"],
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        }
       }
     }
   ],
