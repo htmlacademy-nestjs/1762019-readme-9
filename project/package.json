@@ -43,6 +43,7 @@
     "apps/*",
     "libs/shared/core",
     "libs/shared/helpers",
-    "libs/user/*"
+    "libs/user/*",
+    "libs/shared/data-access"
   ]
 }
