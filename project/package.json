@@ -2,7 +2,11 @@
   "name": "@project/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "lint-all": "nx run-many --target=lint --all",
+    "lint-all:fix": "nx run-many --target=lint --all --fix",
+    "lint:blog-user": "nx lint blog-user"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^10.0.2",
