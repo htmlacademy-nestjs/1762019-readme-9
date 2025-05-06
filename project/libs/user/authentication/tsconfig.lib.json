@@ -15,5 +15,12 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src/**/*.ts"],
-  "references": []
+  "references": [
+    {
+      "path": "../../shared/core/tsconfig.lib.json"
+    },
+    {
+      "path": "../blog-user/tsconfig.lib.json"
+    }
+  ]
 }
