@@ -1,4 +1,15 @@
+import { ApiProperty } from '@nestjs/swagger';
+
 export class LoginUserDto {
-  public email = '';
-  public password = '';
+  @ApiProperty({
+    type: String,
+    default: 'user@notfound.local',
+  })
+  public email!: string;
+
+  @ApiProperty({
+    type: String,
+    default: '123456',
+  })
+  public password!: string;
 }
