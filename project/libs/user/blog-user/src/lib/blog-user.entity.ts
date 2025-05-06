@@ -10,6 +10,7 @@ export class BlogUserEntity extends Entity implements StorableEntity<AuthUser> {
   public dateOfBirth: Date = new Date();
   public role: UserRole = UserRole.User;
   public passwordHash = '';
+  public avatar?: string;
 
   constructor(user?: AuthUser) {
     super();
@@ -28,6 +29,7 @@ export class BlogUserEntity extends Entity implements StorableEntity<AuthUser> {
     this.lastname = user.lastname;
     this.passwordHash = user.passwordHash;
     this.role = user.role;
+    this.avatar = user.avatar;
   }
 
   public async setPassword(password: string): Promise<BlogUserEntity> {

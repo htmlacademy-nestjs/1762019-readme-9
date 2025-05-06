@@ -8,7 +8,6 @@ export interface RepositoryWriter<T extends Entity> {
 
 export interface RepositoryReader<T extends Entity> {
   findById(id: T['id']): Promise<T | null>;
-  getAll(): Promise<T[]>;
 }
 
 export type Repository<T extends Entity> = RepositoryWriter<T> & RepositoryReader<T>;
