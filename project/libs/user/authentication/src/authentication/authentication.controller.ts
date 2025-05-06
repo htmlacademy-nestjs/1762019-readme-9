@@ -8,20 +8,20 @@ import { LoginUserDto } from '../dto/login-user.dto';
 export class AuthenticationController {
   constructor(private readonly authService: AuthenticationService) {}
 
-  @Post('user/register')
+  @Post('register')
   public async create(@Body() dto: CreateUserDto) {
     const newUser = await this.authService.register(dto);
     return newUser.toPOJO();
   }
 
 
-  @Post('user/login')
+  @Post('login')
   public async login(@Body() dto: LoginUserDto) {
     const verifiedUser = await this.authService.verifyUser(dto);
     return verifiedUser.toPOJO();
   }
 
-  @Get('user/:id')
+  @Get(':id')
   public async show(@Param('id') id: string) {
     const existUser = await this.authService.getUser(id);
     return existUser.toPOJO();
