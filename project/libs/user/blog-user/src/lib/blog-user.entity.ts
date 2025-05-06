@@ -1,4 +1,4 @@
-import { genSalt, hash } from 'bcrypt';
+import { compare, genSalt, hash } from 'bcrypt';
 
 import { StorableEntity, AuthUser, UserRole, Entity } from '@project/core';
 import { SALT_ROUNDS } from './blog-user.constants';
@@ -35,6 +35,10 @@ export class BlogUserEntity extends Entity implements StorableEntity<AuthUser> {
     this.passwordHash = await hash(password, salt);
 
     return this;
+  }
+
+  public async comparePassword(password: string): Promise<boolean> {
+    return compare(password, this.passwordHash);
   }
 
   public toPOJO(): AuthUser {
