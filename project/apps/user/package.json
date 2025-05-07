@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "nx": {
-    "name": "user",
     "targets": {
       "build": {
         "executor": "nx:run-commands",
@@ -28,15 +27,15 @@
           "build"
         ],
         "options": {
-          "buildTarget": "user:build",
+          "buildTarget": "@project/user:build",
           "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
-            "buildTarget": "user:build:development"
+            "buildTarget": "@project/user:build:development"
           },
           "production": {
-            "buildTarget": "user:build:production"
+            "buildTarget": "@project/user:build:production"
           }
         }
       }

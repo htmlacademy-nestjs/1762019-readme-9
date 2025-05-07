@@ -4,34 +4,34 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/user-e2e"
-    },
-    {
       "path": "./apps/user"
-    },
-    {
-      "path": "./apps/blog-e2e"
     },
     {
       "path": "./apps/blog"
     },
     {
-      "path": "./apps/file-vault-e2e"
-    },
-    {
       "path": "./apps/file-vault"
-    },
-    {
-      "path": "./apps/notification-center-e2e"
     },
     {
       "path": "./apps/notification-center"
     },
     {
-      "path": "./apps/bff-e2e"
+      "path": "./apps/bff"
     },
     {
-      "path": "./apps/bff"
+      "path": "./libs/shared/core"
+    },
+    {
+      "path": "./libs/shared/helpers"
+    },
+    {
+      "path": "./libs/user/authentication"
+    },
+    {
+      "path": "./libs/user/blog-user"
+    },
+    {
+      "path": "./libs/shared/data-access"
     }
   ]
 }
