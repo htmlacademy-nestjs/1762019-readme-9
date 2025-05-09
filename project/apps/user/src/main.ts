@@ -5,6 +5,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app/app.module';
 
 const GLOBAL_PREFIX = 'api';
+const OPEN_API_PATH = 'spec';
 const PORT = process.env.PORT || '3000';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
@@ -22,7 +23,7 @@ async function bootstrap() {
       .build();
 
     const document = SwaggerModule.createDocument(app, config);
-    SwaggerModule.setup(GLOBAL_PREFIX, app, document);
+    SwaggerModule.setup(OPEN_API_PATH, app, document);
   }
 
   await app.listen(PORT);
@@ -32,7 +33,7 @@ async function bootstrap() {
   );
 
   if (isDevelopment) {
-    Logger.log(`🚀 Swagger is running on: http://localhost:${PORT}/${GLOBAL_PREFIX}`);
+    Logger.log(`🚀 Swagger is running on: http://localhost:${PORT}/${OPEN_API_PATH}`);
   }
 }
 
