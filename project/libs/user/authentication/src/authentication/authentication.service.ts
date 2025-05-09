@@ -1,13 +1,17 @@
 import dayjs from 'dayjs';
-import { ConflictException, Injectable, NotFoundException, UnauthorizedException} from '@nestjs/common';
+import {
+  ConflictException,
+  Injectable,
+  NotFoundException,
+  UnauthorizedException,
+} from '@nestjs/common';
 
 import { UserRole } from '@project/core';
 import { BlogUserRepository, BlogUserEntity } from '@project/blog-user';
 
 import { CreateUserDto } from '../dto/create-user.dto';
-import { AUTH_USER_EXISTS, AUTH_USER_NOT_FOUND, AUTH_USER_PASSWORD_WRONG } from './authentication.constants';
+import { AUTH_USER } from './authentication.constants';
 import { LoginUserDto } from '../dto/login-user.dto';
-
 
 @Injectable()
 export class AuthenticationService {
@@ -23,16 +27,16 @@ export class AuthenticationService {
       role: UserRole.User,
       avatar: '',
       dateOfBirth: dayjs(dateBirth).toDate(),
-      passwordHash: ''
+      passwordHash: '',
     };
 
     const existUser = await this.blogUserRepository.findByEmail(email);
 
     if (existUser) {
-      throw new ConflictException(AUTH_USER_EXISTS);
+      throw new ConflictException(AUTH_USER.EXISTS);
     }
 
-    const userEntity = await new BlogUserEntity(blogUser).setPassword(password)
+    const userEntity = await new BlogUserEntity(blogUser).setPassword(password);
 
     await this.blogUserRepository.save(userEntity);
 
@@ -44,11 +48,11 @@ export class AuthenticationService {
     const user = await this.blogUserRepository.findByEmail(email);
 
     if (!user) {
-      throw new NotFoundException(AUTH_USER_NOT_FOUND);
+      throw new NotFoundException(AUTH_USER.NOT_FOUND);
     }
 
-    if (!await user.comparePassword(password)) {
-      throw new UnauthorizedException(AUTH_USER_PASSWORD_WRONG);
+    if (!(await user.comparePassword(password))) {
+      throw new UnauthorizedException(AUTH_USER.PASSWORD_WRONG);
     }
 
     return user;
@@ -58,7 +62,7 @@ export class AuthenticationService {
     const user = await this.blogUserRepository.findById(id);
 
     if (!user) {
-      throw new NotFoundException(AUTH_USER_NOT_FOUND);
+      throw new NotFoundException(AUTH_USER.NOT_FOUND);
     }
 
     return user;
