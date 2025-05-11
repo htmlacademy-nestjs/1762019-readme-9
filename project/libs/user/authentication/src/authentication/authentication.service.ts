@@ -24,7 +24,7 @@ export class AuthenticationService {
     @Inject(dbConfig.KEY)
     private readonly databaseConfig: ConfigType<typeof dbConfig>
   ) {
-    const { host, user } = databaseConfig;
+    const { host, user } = this.databaseConfig;
 
     console.log({ host, user });
   }
