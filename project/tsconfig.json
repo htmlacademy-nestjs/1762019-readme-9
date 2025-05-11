@@ -35,6 +35,9 @@
     },
     {
       "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/shared/configs"
     }
   ]
 }

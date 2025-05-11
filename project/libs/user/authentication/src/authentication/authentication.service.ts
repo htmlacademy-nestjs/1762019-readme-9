@@ -1,28 +1,31 @@
 import dayjs from 'dayjs';
 import {
   ConflictException,
+  Inject,
   Injectable,
   NotFoundException,
   UnauthorizedException,
 } from '@nestjs/common';
+import type { ConfigType } from '@nestjs/config';
 
 import { UserRole } from '@project/core';
 import { BlogUserRepository, BlogUserEntity } from '@project/blog-user';
+import { dbConfig } from '@project/user-config';
 
 import { CreateUserDto } from '../dto/create-user.dto';
 import { AUTH_USER } from './authentication.constants';
 import { LoginUserDto } from '../dto/login-user.dto';
-import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class AuthenticationService {
   constructor(
     private readonly blogUserRepository: BlogUserRepository,
-    private readonly configService: ConfigService
+    @Inject(dbConfig.KEY)
+    private readonly dbConfiguration: ConfigType<typeof dbConfig>
   ) {
     console.log({
-      host: this.configService.get('db.host'),
-      user: this.configService.get('db.user'),
+      host: this.dbConfiguration.host,
+      user: this.dbConfiguration.user,
     });
   }
 

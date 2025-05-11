@@ -1,45 +1,30 @@
-import { registerAs } from '@nestjs/config';
-import Joi from 'joi';
+import { ConfigType, registerAs } from '@nestjs/config';
+import { plainToInstance } from 'class-transformer';
+
+import { MongoConfiguration } from '@project/configs';
 
 const DEFAULT_MONGO_PORT = 27017;
 
-export interface MongoConfig {
-  host: string;
-  name: string;
-  port: number;
-  user: string;
-  password: string;
-  authBase: string;
-}
+async function getDbConfig(): Promise<MongoConfiguration> {
+  const config = plainToInstance(MongoConfiguration, {
+    host: process.env.MONGO_HOST,
+    name: process.env.MONGO_DB,
+    port: process.env.MONGO_PORT
+      ? parseInt(process.env.MONGO_PORT, 10)
+      : DEFAULT_MONGO_PORT,
+    user: process.env.MONGO_USER,
+    password: process.env.MONGO_PASSWORD,
+    authBase: process.env.MONGO_AUTH_BASE,
+  });
 
-const dbValidationSchema = Joi.object({
-  host: Joi.string().hostname().required(),
-  port: Joi.number().port().default(DEFAULT_MONGO_PORT),
-  name: Joi.string().required(),
-  user: Joi.string().required(),
-  password: Joi.string().required(),
-  authBase: Joi.string().required(),
-});
+  await config.validate();
 
-function validateMongoConfig(config: MongoConfig): void {
-  const { error } = dbValidationSchema.validate(config, { abortEarly: true });
-  if (error) {
-    throw new Error(`[DB Config Validation Error]: ${error.message}`);
-  }
-}
-
-function getDbConfig(): MongoConfig {
-  const config: MongoConfig = {
-    host: process.env.MONGO_HOST as string,
-    name: process.env.MONGO_DB as string,
-    port: parseInt(process.env.MONGO_PORT ?? `${DEFAULT_MONGO_PORT}`, 10),
-    user: process.env.MONGO_USER as string,
-    password: process.env.MONGO_PASSWORD as string,
-    authBase: process.env.MONGO_AUTH_BASE as string,
-  };
-
-  validateMongoConfig(config);
   return config;
 }
 
-export default registerAs('db', getDbConfig);
+export default registerAs(
+  'db',
+  async (): Promise<ConfigType<typeof getDbConfig>> => {
+    return getDbConfig();
+  }
+);
