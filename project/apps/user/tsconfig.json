@@ -4,6 +4,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../libs/shared/configs"
+    },
+    {
       "path": "../../libs/user/config"
     },
     {
