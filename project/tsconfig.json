@@ -32,6 +32,12 @@
     },
     {
       "path": "./libs/shared/data-access"
+    },
+    {
+      "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/shared/configs"
     }
   ]
 }

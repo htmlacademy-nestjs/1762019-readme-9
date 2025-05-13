@@ -4,13 +4,7 @@
   "include": [],
   "references": [
     {
-      "path": "../config"
-    },
-    {
-      "path": "../../shared/core"
-    },
-    {
-      "path": "../blog-user"
+      "path": "../../shared/configs"
     },
     {
       "path": "./tsconfig.lib.json"

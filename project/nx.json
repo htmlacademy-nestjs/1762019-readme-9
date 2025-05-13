@@ -23,7 +23,11 @@
           "watchDepsName": "watch-deps"
         }
       },
-      "exclude": ["libs/user/authentication/*", "libs/user/blog-user/*"]
+      "exclude": [
+        "libs/user/authentication/*",
+        "libs/user/blog-user/*",
+        "libs/user/config/*"
+      ]
     },
     {
       "plugin": "@nx/webpack/plugin",
@@ -43,7 +47,11 @@
     },
     {
       "plugin": "@nx/js/typescript",
-      "include": ["libs/user/authentication/*", "libs/user/blog-user/*"],
+      "include": [
+        "libs/user/authentication/*",
+        "libs/user/blog-user/*",
+        "libs/user/config/*"
+      ],
       "options": {
         "typecheck": {
           "targetName": "typecheck"

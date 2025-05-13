@@ -4,6 +4,12 @@
   "include": [],
   "references": [
     {
+      "path": "../../libs/shared/configs"
+    },
+    {
+      "path": "../../libs/user/config"
+    },
+    {
       "path": "../../libs/user/blog-user"
     },
     {
