@@ -5,7 +5,9 @@
   "scripts": {
     "lint-all": "nx run-many --target=lint --all",
     "lint-all:fix": "nx run-many --target=lint --all --fix",
-    "lint:blog-user": "nx lint blog-user"
+    "lint:blog-user": "nx lint blog-user",
+    "user-db-up": "zx ./apps/user/user-db-up.mjs",
+    "blog-db-up": "zx ./apps/blog/blog-db-up.mjs"
   },
   "private": true,
   "dependencies": {
@@ -50,7 +52,8 @@
     "tslib": "^2.3.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.19.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "zx": "^8.5.4"
   },
   "workspaces": [
     "apps/*",
