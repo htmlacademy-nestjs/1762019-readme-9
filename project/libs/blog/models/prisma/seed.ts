@@ -23,7 +23,8 @@ function getPosts() {
       title: 'Худеющий',
       userId: FIRST_USER_ID,
       content: 'Недавно прочитал страшный роман «Худеющий».',
-      description: 'На мой взгляд, это один из самых страшных романов Стивена Кинга.',
+      description:
+        'На мой взгляд, это один из самых страшных романов Стивена Кинга.',
       categories: {
         connect: [{ id: FIRST_CATEGORY_UUID }],
       },
@@ -35,10 +36,7 @@ function getPosts() {
       content: 'Полезная книга по JavaScript',
       description: 'Секреты и тайные знания по JavaScript.',
       categories: {
-        connect: [
-          { id: FIRST_CATEGORY_UUID },
-          { id: SECOND_CATEGORY_UUID },
-        ]
+        connect: [{ id: FIRST_CATEGORY_UUID }, { id: SECOND_CATEGORY_UUID }],
       },
       comments: [
         {
@@ -46,12 +44,13 @@ function getPosts() {
           userId: FIRST_USER_ID,
         },
         {
-          message: 'Надо будет обязательно перечитать. Слишком много информации.',
+          message:
+            'Надо будет обязательно перечитать. Слишком много информации.',
           userId: SECOND_USER_ID,
-        }
-      ]
-    }
-  ]
+        },
+      ],
+    },
+  ];
 }
 
 async function seedDb(prismaClient: PrismaClient) {
@@ -62,26 +61,30 @@ async function seedDb(prismaClient: PrismaClient) {
       update: {},
       create: {
         id: category.id,
-        title: category.title
-      }
+        title: category.title,
+      },
     });
   }
 
   const mockPosts = getPosts();
   for (const post of mockPosts) {
-    await prismaClient.post.create({
-      data: {
+    await prismaClient.post.upsert({
+      where: { id: post.id },
+      update: {},
+      create: {
         id: post.id,
         title: post.title,
         description: post.description,
         content: post.description,
         categories: post.categories,
         userId: post.userId,
-        comments: post.comments ? {
-          create: post.comments
-        } : undefined
-      }
-    })
+        comments: post.comments
+          ? {
+              create: post.comments,
+            }
+          : undefined,
+      },
+    });
   }
 
   console.info('🤘️ Database was filled');
