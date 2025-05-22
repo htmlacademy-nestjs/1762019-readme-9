@@ -38,6 +38,20 @@
             "buildTarget": "@project/blog:build:production"
           }
         }
+      },
+      "db:lint": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npx prisma validate",
+          "cwd": "./libs/blog/models/prisma"
+        }
+      },
+      "db:up:dev": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "zx ./blog-db-up.mjs",
+          "cwd": "./apps/blog"
+        }
       }
     }
   }
