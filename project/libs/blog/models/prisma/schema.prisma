@@ -23,7 +23,7 @@ model Post {
   createdAt   DateTime   @default(now()) @map("created_at")
   updatedAt   DateTime   @updatedAt @map("updated_at")
   userId      String
-  comment     Comment[]
+  comments    Comment[]
   favorite    Favorite[]
 
   @@index([title])

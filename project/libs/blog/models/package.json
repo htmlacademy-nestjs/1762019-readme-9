@@ -5,9 +5,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "scripts": {
-    "prisma:format": "npx prisma format ./prisma/schema.prisma"
-  },
+  "scripts": {},
   "exports": {
     "./package.json": "./package.json",
     ".": {

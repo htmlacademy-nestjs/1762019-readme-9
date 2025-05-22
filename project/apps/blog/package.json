@@ -46,6 +46,13 @@
           "cwd": "./libs/blog/models/prisma"
         }
       },
+      "db:format": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npx prisma format",
+          "cwd": "./libs/blog/models/prisma"
+        }
+      },
       "db:migrate": {
         "executor": "nx:run-commands",
         "options": {
@@ -65,6 +72,13 @@
         "options": {
           "command": "npx prisma generate",
           "cwd": "./libs/blog/models/prisma"
+        }
+      },
+      "db:seed": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "ts-node seed.ts",
+          "cwd": "libs/blog/models/prisma"
         }
       },
       "db:up:dev": {
