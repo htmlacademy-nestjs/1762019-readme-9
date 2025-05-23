@@ -13,14 +13,14 @@ export abstract class BasePostgresRepository<
   ) {}
 
   protected createEntityFromDocument(document: DocumentType): T | null {
-    if (! document) {
+    if (!document) {
       return null;
     }
 
     return this.entityFactory.create(document as ReturnType<T['toPOJO']>);
   }
 
-  public async findById(id: T['id']): Promise<T> {
+  public async findById(id: T['id']): Promise<T | null> {
     throw new Error('Not implemented');
   }
 
