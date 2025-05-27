@@ -26,7 +26,8 @@
       "exclude": [
         "libs/user/authentication/*",
         "libs/user/blog-user/*",
-        "libs/user/config/*"
+        "libs/user/config/*",
+        "libs/blog/blog-category/*"
       ]
     },
     {
@@ -50,7 +51,8 @@
       "include": [
         "libs/user/authentication/*",
         "libs/user/blog-user/*",
-        "libs/user/config/*"
+        "libs/user/config/*",
+        "libs/blog/blog-category/*"
       ],
       "options": {
         "typecheck": {

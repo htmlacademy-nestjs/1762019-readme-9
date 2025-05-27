@@ -1,0 +1,22 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../../shared/data-access"
+    },
+    {
+      "path": "../models"
+    },
+    {
+      "path": "../../shared/core"
+    },
+    {
+      "path": "../../shared/helpers"
+    },
+    {
+      "path": "./tsconfig.lib.json"
+    }
+  ]
+}
