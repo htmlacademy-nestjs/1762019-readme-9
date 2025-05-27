@@ -1,7 +1,7 @@
 #!/usr/bin/env zx
 
 await $`docker compose \
-  --file ./apps/user/docker-compose.dev.yml \
-  --env-file ./apps/user/.env \
+  --file ./docker-compose.dev.yml \
+  --env-file ./.env \
   --project-name "user" \
   up -d`;

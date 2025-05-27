@@ -38,6 +38,13 @@
             "buildTarget": "@project/user:build:production"
           }
         }
+      },
+      "db:up:dev": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "zx ./user-db-up.mjs",
+          "cwd": "./apps/user"
+        }
       }
     }
   }
