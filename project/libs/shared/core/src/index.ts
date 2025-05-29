@@ -10,4 +10,4 @@ export type { Comment } from './types/comment.interface';
 export type { Post } from './types/post.interface';
 
 export type { PaginationResult } from './interfaces/pagination.interface';
-export type { SortDirection } from './interfaces/sort-direction.interface';
+export { SortDirection } from './interfaces/sort-direction.interface';
