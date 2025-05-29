@@ -11,6 +11,8 @@ import {
   Query,
 } from '@nestjs/common';
 
+import { CommentRdo, CreateCommentDto } from '@project/blog-comment';
+
 import { fillDto } from '@project/helpers';
 
 import { BlogPostService } from './blog-post.service';
@@ -58,5 +60,11 @@ export class BlogPostController {
   public async update(@Param('id') id: string, @Body() dto: UpdatePostDto) {
     const updatedPost = await this.blogPostService.updatePost(id, dto);
     return fillDto(BlogPostRdo, updatedPost.toPOJO());
+  }
+
+  @Post('/:postId/comments')
+  public async createComment(@Param('postId') postId: string, @Body() dto: CreateCommentDto) {
+    const newComment = await this.blogPostService.addComment(postId, dto);
+    return fillDto(CommentRdo, newComment.toPOJO());
   }
 }
