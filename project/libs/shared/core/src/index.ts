@@ -7,3 +7,7 @@ export type { StorableEntity } from './types/storable-entity.interface';
 export type { EntityFactory } from './types/entity-factory.interface';
 export type { Category } from './types/category.interface'
 export type { Comment } from './types/comment.interface';
+export type { Post } from './types/post.interface';
+
+export type { PaginationResult } from './interfaces/pagination.interface';
+export type { SortDirection } from './interfaces/sort-direction.interface';
