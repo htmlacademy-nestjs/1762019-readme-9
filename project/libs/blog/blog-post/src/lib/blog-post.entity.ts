@@ -22,7 +22,7 @@ export class BlogPostEntity extends Entity implements StorableEntity<Post> {
       return;
     }
 
-    this.id = post.id ?? '';
+    this.id = post.id!;
     this.content = post.content;
     this.createdAt = post.createdAt;
     this.updatedAt = post.updatedAt;
