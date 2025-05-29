@@ -34,6 +34,9 @@ async function bootstrap() {
   Logger.log(
     `🚀 Application is running on: http://localhost:${port}/${GLOBAL_PREFIX}`
   );
+  Logger.log(
+    `🚀 Swagger is running on: http://localhost:${port}/${OPEN_API_PATH}`
+  );
 }
 
 bootstrap();

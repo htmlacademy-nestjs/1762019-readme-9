@@ -4,15 +4,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../shared/core"
-    },
-    {
-      "path": "../blog-user"
-    },
-    {
-      "path": "../../shared/pipes"
-    },
-    {
       "path": "./tsconfig.lib.json"
     }
   ]
