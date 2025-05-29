@@ -47,6 +47,9 @@
     },
     {
       "path": "./libs/blog/blog-comment"
+    },
+    {
+      "path": "./libs/blog/blog-post"
     }
   ]
 }
