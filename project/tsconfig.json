@@ -44,6 +44,15 @@
     },
     {
       "path": "./libs/blog/blog-category"
+    },
+    {
+      "path": "./libs/blog/blog-comment"
+    },
+    {
+      "path": "./libs/blog/blog-post"
+    },
+    {
+      "path": "./libs/shared/pipes"
     }
   ]
 }

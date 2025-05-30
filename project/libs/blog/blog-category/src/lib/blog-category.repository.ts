@@ -43,7 +43,7 @@ export class BlogCategoryRepository extends BasePostgresRepository<
     return this.createEntityFromDocument(document);
   }
 
-  public async find(filter?: CategoryFilter): Promise<Array<BlogCategoryEntity | null>> {
+  public async find(filter?: CategoryFilter): Promise<Array<BlogCategoryEntity>> {
     const where = filter ?? categoryFilterToPrismaFilter(filter);
 
     const documents = await this.client.category.findMany({
@@ -51,7 +51,7 @@ export class BlogCategoryRepository extends BasePostgresRepository<
       take: MAX_CATEGORY_LIMIT,
     });
 
-    return documents.map((document) => this.createEntityFromDocument(document));
+    return documents.map((document) => this.createEntityFromDocument(document)!);
   }
 
   public override async deleteById(id: string): Promise<void> {
@@ -71,7 +71,7 @@ export class BlogCategoryRepository extends BasePostgresRepository<
     });
   }
 
-  public async findByIds(ids: string[]): Promise<Array<BlogCategoryEntity | null>> {
+  public async findByIds(ids: string[]): Promise<Array<BlogCategoryEntity>> {
     const records = await this.client.category.findMany({
       where: {
         id: {
@@ -80,6 +80,6 @@ export class BlogCategoryRepository extends BasePostgresRepository<
       },
     });
 
-    return records.map((record) => this.createEntityFromDocument(record));
+    return records.map((record) => this.createEntityFromDocument(record)!);
   }
 }

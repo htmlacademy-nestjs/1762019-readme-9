@@ -27,7 +27,9 @@
         "libs/user/authentication/*",
         "libs/user/blog-user/*",
         "libs/user/config/*",
-        "libs/blog/blog-category/*"
+        "libs/blog/blog-category/*",
+        "libs/blog/blog-comment/*",
+        "libs/blog/blog-post/*"
       ]
     },
     {
@@ -52,7 +54,9 @@
         "libs/user/authentication/*",
         "libs/user/blog-user/*",
         "libs/user/config/*",
-        "libs/blog/blog-category/*"
+        "libs/blog/blog-category/*",
+        "libs/blog/blog-comment/*",
+        "libs/blog/blog-post/*"
       ],
       "options": {
         "typecheck": {

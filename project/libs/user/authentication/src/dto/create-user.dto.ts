@@ -1,4 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { IsEmail, IsISO8601, IsString } from 'class-validator';
+
+import { AuthenticationValidateMessage } from '../authentication/authentication.constants';
 
 export class CreateUserDto {
   @ApiProperty({
@@ -7,6 +10,7 @@ export class CreateUserDto {
     default: 'user@notfound.local',
     example: 'user@user.ru'
   })
+  @IsEmail({}, { message: AuthenticationValidateMessage.EmailNotValid })
   public email!: string;
 
   @ApiProperty({
@@ -15,6 +19,7 @@ export class CreateUserDto {
     example: '1981-03-12',
     default: '2012-02-22',
   })
+  @IsISO8601({}, { message: AuthenticationValidateMessage.DateBirthNotValid })
   public dateBirth!: string;
 
   @ApiProperty({
@@ -22,6 +27,7 @@ export class CreateUserDto {
     description: 'User first name',
     example: 'Keks',
   })
+  @IsString()
   public firstname!: string;
 
   @ApiProperty({
@@ -30,6 +36,7 @@ export class CreateUserDto {
     default: 'Smith',
     example: 'Ivanov'
   })
+  @IsString()
   public lastname!: string;
 
   @ApiProperty({
@@ -38,5 +45,6 @@ export class CreateUserDto {
     example: 'Ivanov',
     default: '123456',
   })
+  @IsString()
   public password!: string;
 }

@@ -53,7 +53,7 @@ export class BlogCategoryService {
     }
   }
 
-  public async getCategoriesByIds(categoryIds: string[]): Promise<Array<BlogCategoryEntity | null>> {
+  public async getCategoriesByIds(categoryIds: string[]): Promise<Array<BlogCategoryEntity>> {
     const categories = await this.blogCategoryRepository.findByIds(categoryIds);
 
     if (categories.length !== categoryIds.length) {
