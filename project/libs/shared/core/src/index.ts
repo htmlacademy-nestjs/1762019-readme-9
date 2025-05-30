@@ -9,5 +9,7 @@ export type { Category } from './types/category.interface'
 export type { Comment } from './types/comment.interface';
 export type { Post } from './types/post.interface';
 
-export type { PaginationResult } from './interfaces/pagination.interface';
 export { SortDirection } from './interfaces/sort-direction.interface';
+export type { PaginationResult } from './interfaces/pagination.interface';
+export type { Token } from './interfaces/token.interface';
+export type { TokenPayload } from './interfaces/token-payload.interface';
