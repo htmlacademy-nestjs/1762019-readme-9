@@ -76,6 +76,7 @@
     "libs/shared/configs",
     "libs/blog/models",
     "libs/blog/*",
-    "libs/shared/pipes"
+    "libs/shared/pipes",
+    "libs/file-vault/config"
   ]
 }

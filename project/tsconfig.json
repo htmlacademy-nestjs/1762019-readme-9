@@ -53,6 +53,9 @@
     },
     {
       "path": "./libs/shared/pipes"
+    },
+    {
+      "path": "./libs/file-vault/config"
     }
   ]
 }
