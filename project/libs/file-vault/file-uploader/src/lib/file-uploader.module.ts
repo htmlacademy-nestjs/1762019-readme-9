@@ -8,4 +8,4 @@ import { FileUploaderService } from './file-uploader.service';
   providers: [FileUploaderService],
   exports: [],
 })
-export class ProjectFileUploaderModule {}
+export class FileUploaderModule {}

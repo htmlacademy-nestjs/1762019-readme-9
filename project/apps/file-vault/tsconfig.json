@@ -4,6 +4,12 @@
   "include": [],
   "references": [
     {
+      "path": "../../libs/file-vault/config"
+    },
+    {
+      "path": "../../libs/file-vault/file-uploader"
+    },
+    {
       "path": "./tsconfig.app.json"
     }
   ]

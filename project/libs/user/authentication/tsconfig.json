@@ -7,7 +7,13 @@
       "path": "../../shared/core"
     },
     {
+      "path": "../config"
+    },
+    {
       "path": "../blog-user"
+    },
+    {
+      "path": "../../shared/helpers"
     },
     {
       "path": "../../shared/pipes"
