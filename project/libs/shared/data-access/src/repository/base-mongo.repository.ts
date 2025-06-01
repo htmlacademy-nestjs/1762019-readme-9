@@ -39,7 +39,6 @@ export abstract class BaseMongoRepository<
 
   public async update(entity: T): Promise<void> {
     const updatedDocument = await this.model
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       .findByIdAndUpdate(entity.id, entity.toPOJO()!, {
         new: true,
         runValidators: true,
