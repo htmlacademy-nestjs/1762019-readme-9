@@ -18,7 +18,7 @@ export class BlogPostEntity extends Entity implements StorableEntity<Post> {
   }
 
   public populate(post?: Post): void {
-    if (! post) {
+    if (!post) {
       return;
     }
 
