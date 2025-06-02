@@ -82,6 +82,7 @@
     "libs/blog/*",
     "libs/shared/pipes",
     "libs/file-vault/config",
-    "libs/file-vault/*"
+    "libs/file-vault/*",
+    "libs/notification-center/*"
   ]
 }
