@@ -4,13 +4,13 @@
   "include": [],
   "references": [
     {
-      "path": "../../shared/data-access"
-    },
-    {
-      "path": "../../shared/helpers"
+      "path": "../config"
     },
     {
       "path": "../../shared/core"
+    },
+    {
+      "path": "../../shared/helpers"
     },
     {
       "path": "./tsconfig.lib.json"

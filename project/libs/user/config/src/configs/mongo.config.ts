@@ -22,11 +22,11 @@ async function getDbConfig(): Promise<MongoConfiguration> {
   return config;
 }
 
-const dbConfig = registerAs(
+const mongoConfig = registerAs(
   'db',
   async (): Promise<ConfigType<typeof getDbConfig>> => {
     return getDbConfig();
   }
 );
 
-export { dbConfig };
+export { mongoConfig };

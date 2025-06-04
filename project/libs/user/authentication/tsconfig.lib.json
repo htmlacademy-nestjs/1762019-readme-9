@@ -26,6 +26,9 @@
       "path": "../blog-user/tsconfig.lib.json"
     },
     {
+      "path": "../notification/tsconfig.lib.json"
+    },
+    {
       "path": "../../shared/helpers/tsconfig.lib.json"
     },
     {

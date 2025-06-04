@@ -8,14 +8,16 @@ import {
   NotFoundException,
   UnauthorizedException,
 } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
 
-import { Token, TokenPayload, User, UserRole } from '@project/core'
+import { Token, TokenPayload, User, UserRole } from '@project/core';
+import { UserNotificationService } from '@project/user-notification';
 import { BlogUserRepository, BlogUserEntity } from '@project/blog-user';
 
 import { CreateUserDto } from '../dto/create-user.dto';
 import { AUTH_USER } from './authentication.constants';
 import { LoginUserDto } from '../dto/login-user.dto';
-import { JwtService } from '@nestjs/jwt';
+
 
 @Injectable()
 export class AuthenticationService {
@@ -23,7 +25,8 @@ export class AuthenticationService {
 
   constructor(
     private readonly blogUserRepository: BlogUserRepository,
-    private readonly jwtService: JwtService
+    private readonly jwtService: JwtService,
+    private readonly notificationService: UserNotificationService
   ) {}
 
   public async register(dto: CreateUserDto) {
@@ -48,6 +51,7 @@ export class AuthenticationService {
     const userEntity = await new BlogUserEntity(blogUser).setPassword(password);
 
     await this.blogUserRepository.save(userEntity);
+    await this.notificationService.registerSubscriber({ email, firstname, lastname });
 
     return userEntity;
   }
@@ -91,7 +95,10 @@ export class AuthenticationService {
       return { accessToken };
     } catch (error: any) {
       this.logger.error('[Token generation error]: ' + error?.message);
-      throw new HttpException('Ошибка при создании токена.', HttpStatus.INTERNAL_SERVER_ERROR);
+      throw new HttpException(
+        'Ошибка при создании токена.',
+        HttpStatus.INTERNAL_SERVER_ERROR
+      );
     }
   }
 }

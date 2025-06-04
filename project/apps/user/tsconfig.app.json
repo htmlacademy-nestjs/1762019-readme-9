@@ -16,6 +16,9 @@
       "path": "../../libs/shared/configs/tsconfig.lib.json"
     },
     {
+      "path": "../../libs/user/notification/tsconfig.lib.json"
+    },
+    {
       "path": "../../libs/user/config/tsconfig.lib.json"
     },
     {

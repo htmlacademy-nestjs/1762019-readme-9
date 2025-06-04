@@ -7,6 +7,9 @@
       "path": "../../libs/shared/configs"
     },
     {
+      "path": "../../libs/user/notification"
+    },
+    {
       "path": "../../libs/user/config"
     },
     {

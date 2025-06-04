@@ -8,7 +8,7 @@ const DEFAULT_RABBIT_PORT = 5672;
 
 type Environment = typeof ENVIRONMENTS[number];
 
-export interface NotifyConfig {
+export interface NotificationCenterConfig {
   environment: string;
   port: number;
   db: {
@@ -50,15 +50,15 @@ const validationSchema = Joi.object({
   })
 });
 
-function validateConfig(config: NotifyConfig): void {
+function validateConfig(config: NotificationCenterConfig): void {
   const { error } = validationSchema.validate(config, { abortEarly: true });
   if (error) {
     throw new Error(`[Notify Config Validation Error]: ${error.message}`);
   }
 }
 
-function getConfig(): NotifyConfig {
-  const config: NotifyConfig = {
+function getConfig(): NotificationCenterConfig {
+  const config: NotificationCenterConfig = {
     environment: process.env.NODE_ENV as Environment,
     port: parseInt(process.env.PORT || `${DEFAULT_PORT}`, 10),
     db: {
