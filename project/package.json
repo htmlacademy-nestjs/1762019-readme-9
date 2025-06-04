@@ -12,6 +12,7 @@
   "private": true,
   "dependencies": {
     "@golevelup/nestjs-rabbitmq": "6.0.1",
+    "@nestjs-modules/mailer": "2.0.2",
     "@nestjs/common": "11.1.0",
     "@nestjs/config": "4.0.2",
     "@nestjs/core": "11.1.0",
@@ -30,6 +31,7 @@
     "fs-extra": "11.3.0",
     "joi": "17.13.3",
     "mongoose": "^8.14.2",
+    "nodemailer": "7.0.3",
     "passport": "0.7.0",
     "passport-jwt": "4.0.1",
     "passport-local": "1.0.0",
@@ -56,6 +58,7 @@
     "@types/mime-types": "^3.0.0",
     "@types/multer": "^1.4.12",
     "@types/node": "~18.16.9",
+    "@types/nodemailer": "6.4.17",
     "@types/passport": "1.0.17",
     "@types/passport-jwt": "4.0.1",
     "@types/passport-local": "1.0.38",
