@@ -11,6 +11,7 @@ export type { Post } from './types/post.interface';
 export type { File } from './types/file.interface';
 export type { StoredFile } from './types/stored-file.interface';
 export type { Subscriber } from './types/subscriber.interface';
+export { RabbitRouting } from './types/rabbit-routing.enum';
 
 export { SortDirection } from './interfaces/sort-direction.interface';
 export type { PaginationResult } from './interfaces/pagination.interface';
