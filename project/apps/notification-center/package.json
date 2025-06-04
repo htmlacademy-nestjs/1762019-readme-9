@@ -38,6 +38,13 @@
             "buildTarget": "@project/notification-center:build:production"
           }
         }
+      },
+      "notification-center:up:dev": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "zx ./scripts/notification-center-up.mjs",
+          "cwd": "./apps/notification-center"
+        }
       }
     }
   }

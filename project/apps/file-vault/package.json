@@ -38,6 +38,13 @@
             "buildTarget": "@project/file-vault:build:production"
           }
         }
+      },
+      "db:up:dev": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "zx ./file-vault-db-up.mjs",
+          "cwd": "./apps/file-vault"
+        }
       }
     }
   }

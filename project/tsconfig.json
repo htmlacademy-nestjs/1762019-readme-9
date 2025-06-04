@@ -53,6 +53,21 @@
     },
     {
       "path": "./libs/shared/pipes"
+    },
+    {
+      "path": "./libs/file-vault/config"
+    },
+    {
+      "path": "./libs/file-vault/file-uploader"
+    },
+    {
+      "path": "./libs/notification-center/email-subscriber"
+    },
+    {
+      "path": "./libs/notification-center/config"
+    },
+    {
+      "path": "./libs/user/notification"
     }
   ]
 }
