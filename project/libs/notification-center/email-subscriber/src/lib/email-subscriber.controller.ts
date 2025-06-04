@@ -5,11 +5,13 @@ import { RabbitRouting } from '@project/core';
 
 import { EmailSubscriberService } from './email-subscriber.service';
 import { CreateSubscriberDto } from './dto/create-subscriber.dto';
+import { MailService } from './mail-module/mail.service';
 
 @Controller()
 export class EmailSubscriberController {
   constructor(
     private readonly subscriberService: EmailSubscriberService,
+    private readonly mailService: MailService
   ) {}
 
   @RabbitSubscribe({
@@ -19,5 +21,6 @@ export class EmailSubscriberController {
   })
   public async create(subscriber: CreateSubscriberDto) {
     await this.subscriberService.addSubscriber(subscriber);
+    await this.mailService.sendNotifyNewSubscriber(subscriber);
   }
 }
