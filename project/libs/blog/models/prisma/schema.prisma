@@ -15,7 +15,7 @@ datasource db {
 }
 
 model Post {
-  id          String     @id @default(uuid()) @map("id")
+  id          String     @id @default(uuid())
   categories  Category[]
   title       String
   description String
