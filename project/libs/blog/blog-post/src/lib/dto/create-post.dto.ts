@@ -10,22 +10,22 @@ import {
 export class CreatePostDto {
   @IsString()
   @IsNotEmpty()
-  public title!: string;
+  public title: string;
 
   @IsString()
   @IsNotEmpty()
-  public description!: string;
+  public description: string;
 
   @IsString()
   @IsNotEmpty()
-  public content!: string;
+  public content: string;
 
   @IsString()
   @IsMongoId()
-  public userId!: string;
+  public userId: string;
 
   @IsUUID('all', { each: true })
   @IsArray()
   @ArrayNotEmpty()
-  public categories!: string[];
+  public categories: string[];
 }

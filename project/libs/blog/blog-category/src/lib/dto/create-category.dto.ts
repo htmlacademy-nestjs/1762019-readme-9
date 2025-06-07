@@ -7,5 +7,5 @@ export class CreateCategoryDto {
     example: 'flowers'
   })
   @IsString()
-  public title!: string;
+  public title: string;
 }

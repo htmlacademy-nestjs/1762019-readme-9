@@ -5,27 +5,27 @@ import { Comment } from '@project/core';
 
 export class BlogPostRdo {
   @Expose()
-  public id!: string;
+  public id: string;
 
   @Expose()
-  public title!: string;
+  public title: string;
 
   @Expose()
-  public description!: string;
+  public description: string;
 
   @Expose()
-  public content!: string;
+  public content: string;
 
   @Expose()
-  public createdAt!: string;
+  public createdAt: string;
 
   @Expose()
-  public userId!: string;
+  public userId: string;
 
   @Expose()
   @Type(() => CategoryRdo)
-  public categories!: CategoryRdo[];
+  public categories: CategoryRdo[];
 
   @Expose()
-  public comments!: Comment[]
+  public comments: Comment[]
 }

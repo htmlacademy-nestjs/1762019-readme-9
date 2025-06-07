@@ -4,12 +4,12 @@ import { StorableEntity, AuthUser, UserRole, Entity } from '@project/core';
 import { SALT_ROUNDS } from './blog-user.constants';
 
 export class BlogUserEntity extends Entity implements StorableEntity<AuthUser> {
-  public email = '';
-  public firstname = '';
-  public lastname = '';
-  public dateOfBirth: Date = new Date();
-  public role: UserRole = UserRole.User;
-  public passwordHash = '';
+  public email: string;
+  public firstname: string;
+  public lastname: string;
+  public dateOfBirth: Date;
+  public role: UserRole;
+  public passwordHash: string;
   public avatar?: string;
 
   constructor(user?: AuthUser) {

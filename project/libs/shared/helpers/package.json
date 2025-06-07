@@ -17,6 +17,7 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "class-transformer": "^0.5.1",
-    "@nestjs/config": "4.0.2"
+    "@nestjs/config": "4.0.2",
+    "@nestjs-modules/mailer": "2.0.2"
   }
 }
