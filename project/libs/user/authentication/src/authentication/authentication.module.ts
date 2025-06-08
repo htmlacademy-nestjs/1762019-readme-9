@@ -12,6 +12,7 @@ import { LocalStrategy } from '../strategies/local.strategy';
 
 import { AuthenticationService } from './authentication.service';
 import { AuthenticationController } from './authentication.controller';
+import { RefreshTokenModule } from '../refresh-token/refresh-token.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { AuthenticationController } from './authentication.controller';
       useFactory: getJwtOptions,
     }),
     UserNotificationModule,
+    RefreshTokenModule,
   ],
   controllers: [AuthenticationController],
   providers: [
