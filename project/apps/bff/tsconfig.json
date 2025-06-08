@@ -4,6 +4,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../libs/user/authentication"
+    },
+    {
       "path": "../../libs/bff/config"
     },
     {

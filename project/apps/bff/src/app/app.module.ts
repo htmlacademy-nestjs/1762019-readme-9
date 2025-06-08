@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
 import { HttpModule } from '@nestjs/axios';
+import type { ConfigType } from '@nestjs/config';
 
 import { bffConfig, BffConfigModule } from '@project/bff-config';
-import type { ConfigType } from '@nestjs/config';
+
+import { UsersController } from './users.controller';
 
 @Module({
   imports: [
@@ -17,7 +19,7 @@ import type { ConfigType } from '@nestjs/config';
       inject: [bffConfig.KEY],
     }),
   ],
-  controllers: [],
+  controllers: [UsersController],
   providers: [],
 })
 export class AppModule {}
