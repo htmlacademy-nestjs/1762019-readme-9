@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common';
 
+import { BffConfigModule } from '@project/bff-config';
+
 @Module({
-  imports: [],
+  imports: [BffConfigModule],
   controllers: [],
   providers: [],
 })

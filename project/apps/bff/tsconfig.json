@@ -4,6 +4,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../libs/bff/config"
+    },
+    {
       "path": "./tsconfig.app.json"
     }
   ]

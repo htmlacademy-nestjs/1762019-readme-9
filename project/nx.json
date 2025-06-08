@@ -33,7 +33,8 @@
         "libs/file-vault/file-uploader/*",
         "libs/notification-center/email-subscriber/*",
         "libs/notification-center/config/*",
-        "libs/user/notification/*"
+        "libs/user/notification/*",
+        "libs/bff/config/*"
       ]
     },
     {
@@ -64,7 +65,8 @@
         "libs/file-vault/file-uploader/*",
         "libs/notification-center/email-subscriber/*",
         "libs/notification-center/config/*",
-        "libs/user/notification/*"
+        "libs/user/notification/*",
+        "libs/bff/config/*"
       ],
       "options": {
         "typecheck": {

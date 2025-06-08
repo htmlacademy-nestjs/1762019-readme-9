@@ -89,6 +89,7 @@
     "libs/file-vault/config",
     "libs/file-vault/*",
     "libs/notification-center/*",
-    "libs/shared/interceptors"
+    "libs/shared/interceptors",
+    "libs/bff/*"
   ]
 }
