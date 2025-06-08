@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   Get,
+  HttpCode,
   HttpStatus,
   Param,
   Post,
@@ -21,6 +22,7 @@ import { AuthenticationResponseMessage } from './authentication.constants';
 import { JwtAuthGuard } from '../guards/jwt-auth.guard';
 import { LocalAuthGuard } from '../guards/local-auth.guard';
 import type { RequestWithUser } from './request-with-user.interface';
+import { JwtRefreshGuard } from '../guards/jwt-refresh.guard';
 
 @ApiTags('authentication')
 @Controller('auth')
@@ -55,6 +57,17 @@ export class AuthenticationController {
   public async login(@Req() { user }: RequestWithUser) {
     const userToken = await this.authService.createUserToken(user!);
     return fillDto(LoggedUserRdo, { ...user?.toPOJO(), ...userToken });
+  }
+
+  @UseGuards(JwtRefreshGuard)
+  @Post('refresh')
+  @HttpCode(HttpStatus.OK)
+  @ApiResponse({
+    status: HttpStatus.OK,
+    description: 'Get a new access/refresh tokens',
+  })
+  public async refreshToken(@Req() { user }: RequestWithUser) {
+    return this.authService.createUserToken(user!);
   }
 
   @ApiResponse({
