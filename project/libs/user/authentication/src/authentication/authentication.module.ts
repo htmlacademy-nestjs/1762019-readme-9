@@ -7,6 +7,7 @@ import { BlogUserModule } from '@project/blog-user';
 import { getJwtOptions } from '@project/user-config';
 
 import { JwtAccessStrategy } from '../strategies/jwt-access.strategy';
+import { JwtRefreshStrategy } from '../strategies/jwt-refresh.strategy';
 import { LocalStrategy } from '../strategies/local.strategy';
 
 import { AuthenticationService } from './authentication.service';
@@ -22,6 +23,11 @@ import { AuthenticationController } from './authentication.controller';
     UserNotificationModule,
   ],
   controllers: [AuthenticationController],
-  providers: [AuthenticationService, JwtAccessStrategy, LocalStrategy],
+  providers: [
+    AuthenticationService,
+    JwtAccessStrategy,
+    JwtRefreshStrategy,
+    LocalStrategy,
+  ],
 })
 export class AuthenticationModule {}

@@ -5,11 +5,16 @@ import type { ConfigType } from '@nestjs/config';
 
 import { jwtConfig } from '@project/user-config';
 import { TokenPayload } from '@project/core';
+import { STRATEGY_NAME } from './strategy-name.constants';
 
 @Injectable()
-export class JwtAccessStrategy extends PassportStrategy(Strategy) {
+export class JwtAccessStrategy extends PassportStrategy(
+  Strategy,
+  STRATEGY_NAME.JWT_ACCESS
+) {
   constructor(
-    @Inject(jwtConfig.KEY) readonly jwtConfiguration: ConfigType<typeof jwtConfig>,
+    @Inject(jwtConfig.KEY)
+    readonly jwtConfiguration: ConfigType<typeof jwtConfig>
   ) {
     const { accessTokenSecret } = jwtConfiguration;
     super({
