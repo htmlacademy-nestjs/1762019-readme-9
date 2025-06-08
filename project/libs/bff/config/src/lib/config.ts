@@ -1,11 +1,18 @@
 import { registerAs } from '@nestjs/config';
 import Joi from 'joi';
 
-interface BffConfig {
+const DEFAULT_PORT = 3000;
+const ENVIRONMENTS = ['development', 'production', 'stage'] as const;
+
+type Environment = (typeof ENVIRONMENTS)[number];
+
+export interface BffConfig {
   userServiceUrl: string;
   blogServiceUrl: string;
   httpClientMaxRedirects: number;
   httpClientTimeout: number;
+  environment: string;
+  port: number;
 }
 
 const validationSchema = Joi.object<BffConfig>({
@@ -13,6 +20,8 @@ const validationSchema = Joi.object<BffConfig>({
   blogServiceUrl: Joi.string().required(),
   httpClientMaxRedirects: Joi.number().required(),
   httpClientTimeout: Joi.number().required(),
+  environment: Joi.string().valid(...ENVIRONMENTS).required(),
+  port: Joi.number().port().default(DEFAULT_PORT),
 });
 
 function validateConfig(config: BffConfig): void {
@@ -28,6 +37,8 @@ function getConfig(): BffConfig {
     blogServiceUrl: process.env.BLOG_SERVICE_URL!,
     httpClientMaxRedirects: parseInt(process.env.HTTP_CLIENT_MAX_REDIRECTS!),
     httpClientTimeout: parseInt(process.env.HTTP_CLIENT_TIMEOUT!),
+    environment: process.env.NODE_ENV as Environment,
+    port: parseInt(process.env.PORT || `${DEFAULT_PORT}`, 10),
   };
 
   validateConfig(config);
@@ -36,5 +47,4 @@ function getConfig(): BffConfig {
 
 const bffConfig = registerAs('bff', getConfig);
 
-export type { BffConfig };
 export { bffConfig };
