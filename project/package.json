@@ -88,6 +88,7 @@
     "libs/shared/pipes",
     "libs/file-vault/config",
     "libs/file-vault/*",
-    "libs/notification-center/*"
+    "libs/notification-center/*",
+    "libs/shared/interceptors"
   ]
 }

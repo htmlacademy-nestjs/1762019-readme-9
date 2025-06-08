@@ -68,6 +68,9 @@
     },
     {
       "path": "./libs/user/notification"
+    },
+    {
+      "path": "./libs/shared/interceptors"
     }
   ]
 }
