@@ -4,7 +4,7 @@ import { Document } from 'mongoose';
 import { JwtToken } from '@project/core';
 
 @Schema({
-  collection: 'refresh-sessions',
+  collection: 'refreshSessions',
   timestamps: true
 })
 export class RefreshTokenModel extends Document implements JwtToken {
