@@ -13,8 +13,8 @@ import { ApiResponse, ApiTags } from '@nestjs/swagger';
 
 import { MongoIdValidationPipe } from '@project/pipes';
 import { fillDto } from '@project/helpers';
+import { CreateUserDto } from '@project/shared-dto';
 
-import { CreateUserDto } from '../dto/create-user.dto';
 import { LoggedUserRdo } from '../rdo/logged-user.rdo';
 import { UserRdo } from '../rdo/user.rdo';
 import { AuthenticationService } from './authentication.service';

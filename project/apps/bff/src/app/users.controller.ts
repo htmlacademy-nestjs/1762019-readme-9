@@ -4,7 +4,7 @@ import { HttpService } from '@nestjs/axios';
 import { Body, Controller, Inject, Post, Req } from '@nestjs/common';
 
 import { bffConfig } from '@project/bff-config';
-import { LoginUserDto } from '@project/authentication';
+import { LoginUserDto } from '@project/shared-dto';
 
 @Controller('user')
 export class UsersController {

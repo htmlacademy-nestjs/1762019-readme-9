@@ -91,6 +91,7 @@
     "libs/file-vault/*",
     "libs/notification-center/*",
     "libs/shared/interceptors",
-    "libs/bff/*"
+    "libs/bff/*",
+    "libs/shared/dto"
   ]
 }

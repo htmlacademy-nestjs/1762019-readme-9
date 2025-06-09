@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsEmail, IsISO8601, IsString } from 'class-validator';
 
-import { AuthenticationValidateMessage } from '../authentication/authentication.constants';
+import { AuthenticationValidateMessage } from '../constants/authentication-validate-message.constants';
 
 export class CreateUserDto {
   @ApiProperty({
