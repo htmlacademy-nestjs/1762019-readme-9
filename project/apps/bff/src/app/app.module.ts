@@ -5,6 +5,7 @@ import type { ConfigType } from '@nestjs/config';
 import { bffConfig, BffConfigModule } from '@project/bff-config';
 
 import { UsersController } from './users.controller';
+import { BlogController } from './blog.controller';
 import { CheckAuthGuard } from './guards/check-auth.guard';
 
 @Module({
@@ -20,7 +21,7 @@ import { CheckAuthGuard } from './guards/check-auth.guard';
       inject: [bffConfig.KEY],
     }),
   ],
-  controllers: [UsersController],
+  controllers: [UsersController, BlogController],
   providers: [CheckAuthGuard],
 })
 export class AppModule {}

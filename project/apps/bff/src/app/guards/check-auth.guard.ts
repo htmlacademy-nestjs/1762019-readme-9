@@ -8,6 +8,7 @@ import { HttpService } from '@nestjs/axios';
 import type { ConfigType } from '@nestjs/config';
 
 import { bffConfig } from '@project/bff-config';
+import { TokenPayload } from '@project/core';
 
 @Injectable()
 export class CheckAuthGuard implements CanActivate {
@@ -22,7 +23,7 @@ export class CheckAuthGuard implements CanActivate {
 
   public async canActivate(context: ExecutionContext): Promise<boolean> {
     const request = context.switchToHttp().getRequest();
-    const { data } = await this.httpService.axiosRef.post(
+    const { data } = await this.httpService.axiosRef.post<TokenPayload>(
       `${this.userServiceUrl}/check`,
       {},
       {

@@ -6,6 +6,7 @@ import {
   IsString,
   IsUUID
 } from 'class-validator';
+import { ApiPropertyOptional } from '@nestjs/swagger';
 
 export class CreatePostDto {
   @IsString()
@@ -20,6 +21,9 @@ export class CreatePostDto {
   @IsNotEmpty()
   public content: string;
 
+  @ApiPropertyOptional({
+    description: 'Can be read from JWT payload'
+  })
   @IsString()
   @IsMongoId()
   public userId: string;
