@@ -22,9 +22,6 @@ export class BlogUserEntity extends Entity implements StorableEntity<AuthUser> {
       return;
     }
 
-    // FIXME в БД нет поля id, возможно имелось ввиду автоматически создаваемое
-    //  монгой поле _id
-    //  в методе /auth/login возвращается пустой id => id: ''
     this.id = user.id ?? '';
     this.email = user.email;
     this.dateOfBirth = user.dateOfBirth;
