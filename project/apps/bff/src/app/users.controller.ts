@@ -1,12 +1,22 @@
 import type { Request } from 'express';
 import type { ConfigType } from '@nestjs/config';
 import { HttpService } from '@nestjs/axios';
-import { Body, Controller, Inject, Post, Req } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Inject,
+  Post,
+  Req,
+  UseFilters,
+} from '@nestjs/common';
 
 import { bffConfig } from '@project/bff-config';
 import { LoginUserDto } from '@project/shared-dto';
 
+import { AxiosExceptionFilter } from './filters/axios-exception.filter';
+
 @Controller('user')
+@UseFilters(AxiosExceptionFilter)
 export class UsersController {
   private readonly baseUrl: string;
 
