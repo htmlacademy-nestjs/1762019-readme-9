@@ -83,6 +83,9 @@
     },
     {
       "path": "./libs/blog/blog-post"
+    },
+    {
+      "path": "./libs/blog/blog-comment"
     }
   ]
 }
