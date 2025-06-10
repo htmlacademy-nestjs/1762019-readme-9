@@ -29,7 +29,6 @@
         "libs/user/config/*",
         "libs/blog/blog-category/*",
         "libs/blog/blog-comment/*",
-        "libs/blog/blog-post/*",
         "libs/file-vault/file-uploader/*",
         "libs/notification-center/email-subscriber/*",
         "libs/notification-center/config/*",
@@ -72,7 +71,8 @@
         "typecheck": {
           "targetName": "typecheck"
         }
-      }
+      },
+      "exclude": ["libs/blog/blog-post/*"]
     }
   ],
   "targetDefaults": {

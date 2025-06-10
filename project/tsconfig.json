@@ -80,6 +80,9 @@
     },
     {
       "path": "./libs/shared/dto"
+    },
+    {
+      "path": "./libs/blog/blog-post"
     }
   ]
 }

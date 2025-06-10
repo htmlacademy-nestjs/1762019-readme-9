@@ -4,24 +4,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../shared/data-access"
-    },
-    {
-      "path": "../models"
-    },
-    {
-      "path": "../blog-comment"
-    },
-    {
-      "path": "../blog-category"
-    },
-    {
-      "path": "../../shared/helpers"
-    },
-    {
-      "path": "../../shared/core"
-    },
-    {
       "path": "./tsconfig.lib.json"
     }
   ]
