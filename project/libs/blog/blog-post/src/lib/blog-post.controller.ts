@@ -42,8 +42,6 @@ export class BlogPostController {
     return fillDto(BlogPostWithPaginationRdo, result);
   }
 
-  // FIXME При создании поста поле id заполняется пустой строкой
-  //  и в таком виде попадает в базу.
   @Post('/')
   public async create(@Body() dto: CreatePostDto) {
     const newPost = await this.blogPostService.createPost(dto);
@@ -63,7 +61,10 @@ export class BlogPostController {
   }
 
   @Post('/:postId/comments')
-  public async createComment(@Param('postId') postId: string, @Body() dto: CreateCommentDto) {
+  public async createComment(
+    @Param('postId') postId: string,
+    @Body() dto: CreateCommentDto
+  ) {
     const newComment = await this.blogPostService.addComment(postId, dto);
     return fillDto(CommentRdo, newComment.toPOJO());
   }

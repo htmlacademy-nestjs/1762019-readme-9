@@ -7,19 +7,26 @@ export class LoggedUserRdo {
     example: '134ce8babd-cc30-4805-9b12-d9420398e7c5',
   })
   @Expose()
-  public id!: string;
+  public id: string;
 
   @ApiProperty({
     description: 'User email',
     example: 'user@user.local'
   })
   @Expose()
-  public email!: string;
+  public email: string;
 
   @ApiProperty({
     description: 'Access token',
-    example: 'user@user.local'
+    example: 'Header.Payload.Signature'
   })
   @Expose()
-  public accessToken!: string;
+  public accessToken: string;
+
+  @ApiProperty({
+    description: 'Refresh token',
+    example: 'Header.Payload.Signature'
+  })
+  @Expose()
+  public refreshToken: string;
 }

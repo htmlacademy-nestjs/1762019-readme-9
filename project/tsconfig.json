@@ -68,6 +68,24 @@
     },
     {
       "path": "./libs/user/notification"
+    },
+    {
+      "path": "./libs/shared/interceptors"
+    },
+    {
+      "path": "./libs/bff/config"
+    },
+    {
+      "path": "./libs/user/authentication"
+    },
+    {
+      "path": "./libs/user/notification"
+    },
+    {
+      "path": "./libs/user/blog-user"
+    },
+    {
+      "path": "./libs/user/config"
     }
   ]
 }

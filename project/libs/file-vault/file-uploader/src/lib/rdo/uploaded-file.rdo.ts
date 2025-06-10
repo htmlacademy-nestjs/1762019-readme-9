@@ -2,20 +2,20 @@ import { Expose } from 'class-transformer';
 
 export class UploadedFileRdo {
   @Expose()
-  public id!: string;
+  public id: string;
 
   @Expose()
-  public originalName!: string;
+  public originalName: string;
 
   @Expose()
-  public hashName!: string;
+  public hashName: string;
 
   @Expose()
-  public subDirectory!: string;
+  public subDirectory: string;
 
   @Expose()
-  public mimetype!: string;
+  public mimetype: string;
 
   @Expose()
-  public size!: number;
+  public size: number;
 }

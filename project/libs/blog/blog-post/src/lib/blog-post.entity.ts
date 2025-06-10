@@ -3,14 +3,14 @@ import { BlogCommentEntity, BlogCommentFactory } from '@project/blog-comment';
 import { Entity, Post, StorableEntity } from '@project/core';
 
 export class BlogPostEntity extends Entity implements StorableEntity<Post> {
-  public title!: string;
-  public categories!: BlogCategoryEntity[]
-  public description!: string;
-  public content!: string;
+  public title: string;
+  public categories: BlogCategoryEntity[]
+  public description: string;
+  public content: string;
   public createdAt?: Date;
   public updatedAt?: Date;
-  public userId!: string;
-  public comments!: BlogCommentEntity[];
+  public userId: string;
+  public comments: BlogCommentEntity[];
 
   constructor(post?: Post) {
     super();

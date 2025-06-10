@@ -7,9 +7,12 @@ import { BlogUserModule } from '@project/blog-user';
 import { getJwtOptions } from '@project/user-config';
 
 import { JwtAccessStrategy } from '../strategies/jwt-access.strategy';
+import { JwtRefreshStrategy } from '../strategies/jwt-refresh.strategy';
+import { LocalStrategy } from '../strategies/local.strategy';
 
 import { AuthenticationService } from './authentication.service';
 import { AuthenticationController } from './authentication.controller';
+import { RefreshTokenModule } from '../refresh-token/refresh-token.module';
 
 @Module({
   imports: [
@@ -19,8 +22,14 @@ import { AuthenticationController } from './authentication.controller';
       useFactory: getJwtOptions,
     }),
     UserNotificationModule,
+    RefreshTokenModule,
   ],
   controllers: [AuthenticationController],
-  providers: [AuthenticationService, JwtAccessStrategy],
+  providers: [
+    AuthenticationService,
+    JwtAccessStrategy,
+    JwtRefreshStrategy,
+    LocalStrategy,
+  ],
 })
 export class AuthenticationModule {}

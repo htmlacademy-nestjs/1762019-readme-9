@@ -4,6 +4,21 @@
   "include": [],
   "references": [
     {
+      "path": "../../libs/user/authentication"
+    },
+    {
+      "path": "../../libs/shared/core"
+    },
+    {
+      "path": "../../libs/shared/interceptors"
+    },
+    {
+      "path": "../../libs/blog/blog-post"
+    },
+    {
+      "path": "../../libs/bff/config"
+    },
+    {
       "path": "./tsconfig.app.json"
     }
   ]

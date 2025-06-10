@@ -12,6 +12,8 @@
   "private": true,
   "dependencies": {
     "@golevelup/nestjs-rabbitmq": "6.0.1",
+    "@nestjs-modules/mailer": "2.0.2",
+    "@nestjs/axios": "4.0.0",
     "@nestjs/common": "11.1.0",
     "@nestjs/config": "4.0.2",
     "@nestjs/core": "11.1.0",
@@ -28,8 +30,10 @@
     "class-validator": "0.14.2",
     "dayjs": "^1.11.13",
     "fs-extra": "11.3.0",
+    "handlebars": "4.7.8",
     "joi": "17.13.3",
     "mongoose": "^8.14.2",
+    "nodemailer": "7.0.3",
     "passport": "0.7.0",
     "passport-jwt": "4.0.1",
     "passport-local": "1.0.0",
@@ -56,6 +60,7 @@
     "@types/mime-types": "^3.0.0",
     "@types/multer": "^1.4.12",
     "@types/node": "~18.16.9",
+    "@types/nodemailer": "6.4.17",
     "@types/passport": "1.0.17",
     "@types/passport-jwt": "4.0.1",
     "@types/passport-local": "1.0.38",
@@ -84,6 +89,9 @@
     "libs/shared/pipes",
     "libs/file-vault/config",
     "libs/file-vault/*",
-    "libs/notification-center/*"
+    "libs/notification-center/*",
+    "libs/shared/interceptors",
+    "libs/bff/*",
+    "libs/shared/dto"
   ]
 }

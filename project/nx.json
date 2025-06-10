@@ -24,16 +24,10 @@
         }
       },
       "exclude": [
-        "libs/user/authentication/*",
-        "libs/user/blog-user/*",
-        "libs/user/config/*",
-        "libs/blog/blog-category/*",
-        "libs/blog/blog-comment/*",
-        "libs/blog/blog-post/*",
         "libs/file-vault/file-uploader/*",
         "libs/notification-center/email-subscriber/*",
         "libs/notification-center/config/*",
-        "libs/user/notification/*"
+        "libs/bff/config/*"
       ]
     },
     {
@@ -64,13 +58,23 @@
         "libs/file-vault/file-uploader/*",
         "libs/notification-center/email-subscriber/*",
         "libs/notification-center/config/*",
-        "libs/user/notification/*"
+        "libs/user/notification/*",
+        "libs/bff/config/*"
       ],
       "options": {
         "typecheck": {
           "targetName": "typecheck"
         }
-      }
+      },
+      "exclude": [
+        "libs/blog/blog-post/*",
+        "libs/blog/blog-comment/*",
+        "libs/blog/blog-category/*",
+        "libs/user/authentication/*",
+        "libs/user/notification/*",
+        "libs/user/blog-user/*",
+        "libs/user/config/*"
+      ]
     }
   ],
   "targetDefaults": {

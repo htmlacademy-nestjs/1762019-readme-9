@@ -10,13 +10,13 @@
       "path": "../models"
     },
     {
-      "path": "../blog-comment"
-    },
-    {
       "path": "../blog-category"
     },
     {
       "path": "../../shared/helpers"
+    },
+    {
+      "path": "../blog-comment"
     },
     {
       "path": "../../shared/core"

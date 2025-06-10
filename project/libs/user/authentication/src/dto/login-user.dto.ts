@@ -10,7 +10,7 @@ export class LoginUserDto {
     default: 'user@notfound.local',
   })
   @IsEmail({}, { message: AuthenticationValidateMessage.EmailNotValid })
-  public email!: string;
+  public email: string;
 
   @ApiProperty({
     description: 'User password',
@@ -18,5 +18,5 @@ export class LoginUserDto {
     default: '123456',
   })
   @IsString()
-  public password!: string;
+  public password: string;
 }

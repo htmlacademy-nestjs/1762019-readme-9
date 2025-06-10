@@ -11,7 +11,7 @@ export class CreateUserDto {
     example: 'user@user.ru'
   })
   @IsEmail({}, { message: AuthenticationValidateMessage.EmailNotValid })
-  public email!: string;
+  public email: string;
 
   @ApiProperty({
     type: String,
@@ -20,7 +20,7 @@ export class CreateUserDto {
     default: '2012-02-22',
   })
   @IsISO8601({}, { message: AuthenticationValidateMessage.DateBirthNotValid })
-  public dateBirth!: string;
+  public dateBirth: string;
 
   @ApiProperty({
     type: String,
@@ -28,7 +28,7 @@ export class CreateUserDto {
     example: 'Keks',
   })
   @IsString()
-  public firstname!: string;
+  public firstname: string;
 
   @ApiProperty({
     type: String,
@@ -37,7 +37,7 @@ export class CreateUserDto {
     example: 'Ivanov'
   })
   @IsString()
-  public lastname!: string;
+  public lastname: string;
 
   @ApiProperty({
     type: String,
@@ -46,5 +46,5 @@ export class CreateUserDto {
     default: '123456',
   })
   @IsString()
-  public password!: string;
+  public password: string;
 }

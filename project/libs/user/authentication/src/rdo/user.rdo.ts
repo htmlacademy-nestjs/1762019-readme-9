@@ -7,21 +7,21 @@ export class UserRdo {
     example: '13'
   })
   @Expose()
-  public id!: string;
+  public id: string;
 
   @ApiProperty({
     description: 'User avatar path',
     example: '/images/user.png'
   })
   @Expose()
-  public avatar!: string;
+  public avatar1: string;
 
   @ApiProperty({
     description: 'User date birth (ISO format)',
     example: '1981-03-12'
   })
   @Expose()
-  public dateOfBirth!: string;
+  public dateOfBirth: string;
 
 
   @ApiProperty({
@@ -29,19 +29,19 @@ export class UserRdo {
     example: 'user@user.local'
   })
   @Expose()
-  public email!: string;
+  public email: string;
 
   @ApiProperty({
     description: 'User first name',
     example: 'Keks'
   })
   @Expose()
-  public firstname!: string;
+  public firstname: string;
 
   @ApiProperty({
     description: 'User last name',
     example: 'Keks'
   })
   @Expose()
-  public lastname!: string;
+  public lastname: string;
 }

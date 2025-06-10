@@ -9,33 +9,33 @@ import { AuthUser, UserRole } from '@project/core';
 })
 export class BlogUserModel extends Document implements AuthUser {
   @Prop()
-  public avatar!: string;
+  public avatar: string;
 
   @Prop({
     required: true,
   })
-  public dateOfBirth!: Date;
+  public dateOfBirth: Date;
 
   @Prop({
     required: true,
     unique: true,
   })
-  public email!: string;
+  public email: string;
 
   @Prop({
     required: true,
   })
-  public firstname!: string;
+  public firstname: string;
 
   @Prop({
     required: true,
   })
-  public lastname!: string;
+  public lastname: string;
 
   @Prop({
     required: true,
   })
-  public passwordHash!: string;
+  public passwordHash: string;
 
   @Prop({
     required: true,
@@ -43,7 +43,7 @@ export class BlogUserModel extends Document implements AuthUser {
     enum: UserRole,
     default: UserRole.User,
   })
-  public role!: UserRole;
+  public role: UserRole;
 }
 
 export const BlogUserSchema = SchemaFactory.createForClass(BlogUserModel);
