@@ -22,6 +22,9 @@
       "path": "../../libs/shared/interceptors/tsconfig.lib.json"
     },
     {
+      "path": "../../libs/blog/blog-post/tsconfig.lib.json"
+    },
+    {
       "path": "../../libs/bff/config/tsconfig.lib.json"
     }
   ]

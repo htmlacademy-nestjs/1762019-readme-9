@@ -13,6 +13,9 @@
       "path": "../../libs/shared/interceptors"
     },
     {
+      "path": "../../libs/blog/blog-post"
+    },
+    {
       "path": "../../libs/bff/config"
     },
     {
