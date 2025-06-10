@@ -4,12 +4,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../shared/data-access"
-    },
-    {
-      "path": "../../shared/core"
-    },
-    {
       "path": "./tsconfig.lib.json"
     }
   ]

@@ -24,7 +24,6 @@
         }
       },
       "exclude": [
-        "libs/user/blog-user/*",
         "libs/user/config/*",
         "libs/file-vault/file-uploader/*",
         "libs/notification-center/email-subscriber/*",
@@ -73,7 +72,8 @@
         "libs/blog/blog-comment/*",
         "libs/blog/blog-category/*",
         "libs/user/authentication/*",
-        "libs/user/notification/*"
+        "libs/user/notification/*",
+        "libs/user/blog-user/*"
       ]
     }
   ],
