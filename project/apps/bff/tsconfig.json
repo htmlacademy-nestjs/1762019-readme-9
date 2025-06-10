@@ -4,7 +4,7 @@
   "include": [],
   "references": [
     {
-      "path": "../../libs/shared/dto"
+      "path": "../../libs/user/authentication"
     },
     {
       "path": "../../libs/shared/core"

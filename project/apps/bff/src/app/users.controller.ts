@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 
 import { bffConfig } from '@project/bff-config';
-import { LoginUserDto } from '@project/shared-dto';
+import { LoginUserDto } from '@project/authentication';
 
 import { AxiosExceptionFilter } from './filters/axios-exception.filter';
 

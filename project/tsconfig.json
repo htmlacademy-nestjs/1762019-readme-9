@@ -74,21 +74,6 @@
     },
     {
       "path": "./libs/bff/config"
-    },
-    {
-      "path": "./libs/bff/config"
-    },
-    {
-      "path": "./libs/shared/dto"
-    },
-    {
-      "path": "./libs/blog/blog-post"
-    },
-    {
-      "path": "./libs/blog/blog-comment"
-    },
-    {
-      "path": "./libs/blog/blog-category"
     }
   ]
 }

@@ -18,11 +18,12 @@ import { UserNotificationService } from '@project/user-notification';
 import { BlogUserRepository, BlogUserEntity } from '@project/blog-user';
 import { jwtConfig } from '@project/user-config';
 import { createJWTPayload } from '@project/helpers';
-import { LoginUserDto, CreateUserDto } from '@project/shared-dto';
+
+import { LoginUserDto } from '../dto/login-user.dto';
+import { CreateUserDto } from '../dto/create-user.dto';
+import { RefreshTokenService } from '../refresh-token/refresh-token.service';
 
 import { AUTH_USER } from './authentication.constants';
-
-import { RefreshTokenService } from '../refresh-token/refresh-token.service';
 
 @Injectable()
 export class AuthenticationService {

@@ -32,9 +32,6 @@
       "path": "../notification/tsconfig.lib.json"
     },
     {
-      "path": "../../shared/dto/tsconfig.lib.json"
-    },
-    {
       "path": "../../shared/helpers/tsconfig.lib.json"
     },
     {
