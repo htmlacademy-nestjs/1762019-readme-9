@@ -4,6 +4,27 @@
   "include": [],
   "references": [
     {
+      "path": "../../shared/data-access"
+    },
+    {
+      "path": "../../shared/core"
+    },
+    {
+      "path": "../config"
+    },
+    {
+      "path": "../blog-user"
+    },
+    {
+      "path": "../notification"
+    },
+    {
+      "path": "../../shared/helpers"
+    },
+    {
+      "path": "../../shared/pipes"
+    },
+    {
       "path": "./tsconfig.lib.json"
     }
   ]
