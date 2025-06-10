@@ -74,6 +74,9 @@
     },
     {
       "path": "./libs/bff/config"
+    },
+    {
+      "path": "./libs/user/authentication"
     }
   ]
 }

@@ -2,15 +2,38 @@
   "name": "@project/authentication",
   "version": "0.0.1",
   "private": true,
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "types": "./src/index.d.ts",
   "exports": {
     ".": {
       "types": "./src/index.ts",
       "import": "./src/index.ts",
-      "default": "./src/index.ts"
+      "default": "./src/index.ts",
+      "development": "./src/index.ts"
     },
     "./package.json": "./package.json"
   },
-  "dependencies": {}
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "executor": "@nx/js:tsc",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "options": {
+          "outputPath": "dist/libs/user/authentication",
+          "tsConfig": "libs/user/authentication/tsconfig.lib.json",
+          "packageJson": "libs/user/authentication/package.json",
+          "main": "libs/user/authentication/src/index.ts",
+          "assets": [
+            "libs/user/authentication/*.md"
+          ]
+        }
+      }
+    }
+  }
 }
