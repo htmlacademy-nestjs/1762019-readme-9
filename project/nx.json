@@ -27,7 +27,6 @@
         "libs/user/authentication/*",
         "libs/user/blog-user/*",
         "libs/user/config/*",
-        "libs/blog/blog-category/*",
         "libs/file-vault/file-uploader/*",
         "libs/notification-center/email-subscriber/*",
         "libs/notification-center/config/*",
@@ -71,7 +70,11 @@
           "targetName": "typecheck"
         }
       },
-      "exclude": ["libs/blog/blog-post/*", "libs/blog/blog-comment/*"]
+      "exclude": [
+        "libs/blog/blog-post/*",
+        "libs/blog/blog-comment/*",
+        "libs/blog/blog-category/*"
+      ]
     }
   ],
   "targetDefaults": {
