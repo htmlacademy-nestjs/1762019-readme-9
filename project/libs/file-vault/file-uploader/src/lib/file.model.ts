@@ -7,7 +7,7 @@ import { File } from '@project/core';
   collection: 'files',
   timestamps: true,
   toJSON: { virtuals: true },
-  toObject: { virtuals: true }
+  toObject: { virtuals: true },
 })
 export class FileModel extends Document implements File {
   @Prop({
@@ -16,12 +16,12 @@ export class FileModel extends Document implements File {
   public originalName: string;
 
   @Prop({
-    required: true
+    required: true,
   })
   public hashName: string;
 
   @Prop({
-    required: true
+    required: true,
   })
   public subDirectory: string;
 
@@ -40,7 +40,7 @@ export class FileModel extends Document implements File {
   })
   public size: number;
 
-  public id?: string;
+  public override id?: string;
 
   public createdAt: Date;
 
@@ -50,5 +50,5 @@ export class FileModel extends Document implements File {
 export const FileSchema = SchemaFactory.createForClass(FileModel);
 
 FileSchema.virtual('id').get(function() {
-  return this._id.toString();
+  return String(this._id);
 });
