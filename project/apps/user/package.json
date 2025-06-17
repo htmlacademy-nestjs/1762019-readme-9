@@ -55,6 +55,15 @@
           ],
           "cwd": "./apps/user"
         }
+      },
+      "docker:run:example": {
+        "executor": "nx:run-commands",
+        "options": {
+          "commands": [
+            "docker run -d --name readme.user --env-file .env readme-user:latest"
+          ],
+          "cwd": "./apps/user"
+        }
       }
     }
   }
