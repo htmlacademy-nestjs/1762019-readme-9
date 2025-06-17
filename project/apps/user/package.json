@@ -45,6 +45,16 @@
           "command": "zx ./user-db-up.mjs",
           "cwd": "./apps/user"
         }
+      },
+      "docker:build": {
+        "executor": "nx:run-commands",
+        "options": {
+          "commands": [
+            "nx run @project/user:build",
+            "docker build --file Dockerfile --tag readme-user:latest ."
+          ],
+          "cwd": "./apps/user"
+        }
       }
     }
   }
