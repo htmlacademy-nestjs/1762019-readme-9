@@ -86,6 +86,33 @@
     },
     {
       "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/user/authentication"
+    },
+    {
+      "path": "./libs/user/blog-user"
+    },
+    {
+      "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/user/notification"
+    },
+    {
+      "path": "./libs/blog/blog-post"
+    },
+    {
+      "path": "./libs/blog/blog-category"
+    },
+    {
+      "path": "./libs/blog/blog-comment"
+    },
+    {
+      "path": "./libs/blog/models"
+    },
+    {
+      "path": "./libs/file-vault/config"
     }
   ]
 }
