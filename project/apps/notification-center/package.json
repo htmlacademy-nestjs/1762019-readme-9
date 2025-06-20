@@ -39,7 +39,7 @@
           }
         }
       },
-      "notification-center:up:dev": {
+      "db:up:dev": {
         "executor": "nx:run-commands",
         "options": {
           "command": "zx ./scripts/notification-center-up.mjs",

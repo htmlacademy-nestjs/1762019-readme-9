@@ -15,9 +15,9 @@ export class EmailSubscriberController {
   ) {}
 
   @RabbitSubscribe({
-    exchange: 'readme.notification.income',
-    routingKey: RabbitRouting.AddSubscriber,
+    exchange: 'readme.notification',
     queue: 'readme.notification.income',
+    routingKey: RabbitRouting.AddSubscriber,
   })
   public async create(subscriber: CreateSubscriberDto) {
     await this.subscriberService.addSubscriber(subscriber);
