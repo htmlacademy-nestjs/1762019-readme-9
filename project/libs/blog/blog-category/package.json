@@ -15,6 +15,15 @@
     }
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@nestjs/common": "11.1.0",
+    "@project/helpers": "0.0.1",
+    "@project/core": "0.0.1",
+    "@prisma/client": "6.8.2",
+    "@project/blog-models": "0.0.1",
+    "@project/data-access": "0.0.1",
+    "@nestjs/swagger": "11.2.0",
+    "class-validator": "0.14.2",
+    "class-transformer": "0.5.1"
   }
 }

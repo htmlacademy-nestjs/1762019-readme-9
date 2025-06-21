@@ -15,6 +15,12 @@
     }
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "bcrypt": "^5.1.1",
+    "@project/core": "0.0.1",
+    "@nestjs/common": "11.1.0",
+    "mongoose": "^8.14.2",
+    "@nestjs/mongoose": "^11.0.3",
+    "@project/data-access": "0.0.1"
   }
 }

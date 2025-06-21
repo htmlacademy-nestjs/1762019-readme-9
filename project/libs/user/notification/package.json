@@ -15,6 +15,13 @@
     }
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "class-validator": "0.14.2",
+    "@nestjs/common": "11.1.0",
+    "@golevelup/nestjs-rabbitmq": "6.0.1",
+    "@project/helpers": "0.0.1",
+    "@nestjs/config": "4.0.2",
+    "@project/core": "0.0.1",
+    "@project/user-config": "0.0.1"
   }
 }
