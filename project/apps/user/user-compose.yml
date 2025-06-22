@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  readme.user.mongodb:
+    image: mongo:8.0.9
+    container_name: readme.user.mongodb
+    restart: always
+
+    env_file:
+      - .env
+    volumes:
+      - readme.mongo.user:/data/db
+    networks:
+      - readme.user.network
+
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh -u ${MONGO_USER} -p ${MONGO_PASSWORD} --eval 'db.runCommand({ping:1})'"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  readme.user.service:
+    container_name: readme.user.service
+    depends_on:
+      - readme.user.mongodb
+    restart: on-failure:5
+#    Can use pre-built image:
+#    image: readme-user:latest
+#    or build one:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - ${PORT}:${PORT}
+    networks:
+      - readme.user.network
+
+networks:
+  readme.user.network:
+    driver: bridge
+
+volumes:
+  readme.mongo.user:

@@ -46,6 +46,13 @@
           "cwd": "./apps/user"
         }
       },
+      "service-up:dev": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "docker compose -f ./user-compose.yml -p user-service up -d",
+          "cwd": "./apps/user"
+        }
+      },
       "docker:build": {
         "executor": "nx:run-commands",
         "options": {
