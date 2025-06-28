@@ -1,4 +1,7 @@
 {
+  "tui": {
+    "enabled": true
+  },
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
@@ -27,7 +30,22 @@
         "libs/file-vault/file-uploader/*",
         "libs/notification-center/email-subscriber/*",
         "libs/notification-center/config/*",
-        "libs/bff/config/*"
+        "libs/bff/config/*",
+        "libs/user/authentication/*",
+        "libs/user/blog-user/*",
+        "libs/user/config/*",
+        "libs/user/notification/*",
+        "libs/blog/blog-category/*",
+        "libs/blog/blog-comment/*",
+        "libs/blog/models/*",
+        "libs/blog/blog-post/*",
+        "libs/shared/configs/*",
+        "libs/shared/core/*",
+        "libs/shared/data-access/*",
+        "libs/shared/helpers/*",
+        "libs/shared/interceptors/*",
+        "libs/shared/pipes/*",
+        "libs/file-vault/config/*"
       ]
     },
     {
@@ -59,22 +77,29 @@
         "libs/notification-center/email-subscriber/*",
         "libs/notification-center/config/*",
         "libs/user/notification/*",
-        "libs/bff/config/*"
+        "libs/bff/config/*",
+        "libs/shared/configs/*",
+        "libs/shared/core/*",
+        "libs/shared/data-access/*",
+        "libs/shared/helpers/*",
+        "libs/shared/interceptors/*",
+        "libs/shared/pipes/*",
+        "libs/file-vault/config/*"
       ],
       "options": {
         "typecheck": {
           "targetName": "typecheck"
         }
-      },
-      "exclude": [
-        "libs/blog/blog-post/*",
-        "libs/blog/blog-comment/*",
-        "libs/blog/blog-category/*",
-        "libs/user/authentication/*",
-        "libs/user/notification/*",
-        "libs/user/blog-user/*",
-        "libs/user/config/*"
-      ]
+      }
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "include": ["libs/blog/models/*"],
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        }
+      }
     }
   ],
   "targetDefaults": {

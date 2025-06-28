@@ -86,6 +86,99 @@
     },
     {
       "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/user/authentication"
+    },
+    {
+      "path": "./libs/user/blog-user"
+    },
+    {
+      "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/user/notification"
+    },
+    {
+      "path": "./libs/blog/blog-post"
+    },
+    {
+      "path": "./libs/blog/blog-category"
+    },
+    {
+      "path": "./libs/blog/blog-comment"
+    },
+    {
+      "path": "./libs/blog/models"
+    },
+    {
+      "path": "./libs/file-vault/config"
+    },
+    {
+      "path": "./libs/user/authentication"
+    },
+    {
+      "path": "./libs/user/blog-user"
+    },
+    {
+      "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/user/notification"
+    },
+    {
+      "path": "./libs/bff/config"
+    },
+    {
+      "path": "./libs/blog/blog-category"
+    },
+    {
+      "path": "./libs/blog/blog-comment"
+    },
+    {
+      "path": "./libs/blog/models"
+    },
+    {
+      "path": "./libs/blog/blog-post"
+    },
+    {
+      "path": "./libs/shared/configs"
+    },
+    {
+      "path": "./libs/shared/core"
+    },
+    {
+      "path": "./libs/shared/data-access"
+    },
+    {
+      "path": "./libs/shared/helpers"
+    },
+    {
+      "path": "./libs/shared/interceptors"
+    },
+    {
+      "path": "./libs/shared/pipes"
+    },
+    {
+      "path": "./libs/notification-center/email-subscriber"
+    },
+    {
+      "path": "./libs/notification-center/config"
+    },
+    {
+      "path": "./libs/file-vault/file-uploader"
+    },
+    {
+      "path": "./libs/file-vault/config"
     }
   ]
 }

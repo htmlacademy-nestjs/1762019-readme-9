@@ -87,6 +87,23 @@
           "command": "zx ./blog-db-up.mjs",
           "cwd": "./apps/blog"
         }
+      },
+      "docker:build": {
+        "executor": "nx:run-commands",
+        "options": {
+          "commands": [
+            "nx run @project/blog:build:production",
+            "docker build --file apps/blog/Dockerfile --tag readme-blog:latest ."
+          ]
+        }
+      },
+      "docker:run:example": {
+        "executor": "nx:run-commands",
+        "options": {
+          "commands": [
+            "docker run -d --name readme.blog --env-file apps/blog/.env readme-blog:latest"
+          ]
+        }
       }
     }
   }
