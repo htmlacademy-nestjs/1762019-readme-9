@@ -158,6 +158,9 @@
     },
     {
       "path": "./libs/shared/data-access"
+    },
+    {
+      "path": "./libs/shared/helpers"
     }
   ]
 }

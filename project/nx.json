@@ -38,7 +38,8 @@
         "libs/blog/blog-post/*",
         "libs/shared/configs/*",
         "libs/shared/core/*",
-        "libs/shared/data-access/*"
+        "libs/shared/data-access/*",
+        "libs/shared/helpers/*"
       ]
     },
     {
@@ -73,7 +74,8 @@
         "libs/bff/config/*",
         "libs/shared/configs/*",
         "libs/shared/core/*",
-        "libs/shared/data-access/*"
+        "libs/shared/data-access/*",
+        "libs/shared/helpers/*"
       ],
       "options": {
         "typecheck": {
