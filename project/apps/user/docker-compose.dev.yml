@@ -1,3 +1,5 @@
+version: '3.9'
+
 services:
   readme.user.mongo:
     image: mongo:8.0.9
