@@ -119,6 +119,18 @@
     },
     {
       "path": "./libs/user/blog-user"
+    },
+    {
+      "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/user/config"
     }
   ]
 }
