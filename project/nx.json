@@ -39,7 +39,8 @@
         "libs/shared/configs/*",
         "libs/shared/core/*",
         "libs/shared/data-access/*",
-        "libs/shared/helpers/*"
+        "libs/shared/helpers/*",
+        "libs/shared/interceptors/*"
       ]
     },
     {
@@ -75,7 +76,8 @@
         "libs/shared/configs/*",
         "libs/shared/core/*",
         "libs/shared/data-access/*",
-        "libs/shared/helpers/*"
+        "libs/shared/helpers/*",
+        "libs/shared/interceptors/*"
       ],
       "options": {
         "typecheck": {
