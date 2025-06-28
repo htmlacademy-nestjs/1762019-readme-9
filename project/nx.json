@@ -31,7 +31,8 @@
         "libs/user/authentication/*",
         "libs/user/blog-user/*",
         "libs/user/config/*",
-        "libs/user/notification/*"
+        "libs/user/notification/*",
+        "libs/blog/blog-category/*"
       ]
     },
     {
@@ -70,11 +71,7 @@
           "targetName": "typecheck"
         }
       },
-      "exclude": [
-        "libs/blog/blog-post/*",
-        "libs/blog/blog-comment/*",
-        "libs/blog/blog-category/*"
-      ]
+      "exclude": ["libs/blog/blog-post/*", "libs/blog/blog-comment/*"]
     }
   ],
   "targetDefaults": {

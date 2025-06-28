@@ -137,6 +137,9 @@
     },
     {
       "path": "./libs/bff/config"
+    },
+    {
+      "path": "./libs/blog/blog-category"
     }
   ]
 }
