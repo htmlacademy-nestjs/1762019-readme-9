@@ -134,6 +134,9 @@
     },
     {
       "path": "./libs/user/notification"
+    },
+    {
+      "path": "./libs/bff/config"
     }
   ]
 }
