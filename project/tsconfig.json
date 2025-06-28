@@ -113,6 +113,9 @@
     },
     {
       "path": "./libs/file-vault/config"
+    },
+    {
+      "path": "./libs/user/authentication"
     }
   ]
 }
