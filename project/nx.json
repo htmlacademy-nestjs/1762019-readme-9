@@ -34,7 +34,8 @@
         "libs/user/notification/*",
         "libs/blog/blog-category/*",
         "libs/blog/blog-comment/*",
-        "libs/blog/models/*"
+        "libs/blog/models/*",
+        "libs/blog/blog-post/*"
       ]
     },
     {
@@ -72,8 +73,7 @@
         "typecheck": {
           "targetName": "typecheck"
         }
-      },
-      "exclude": ["libs/blog/blog-post/*"]
+      }
     },
     {
       "plugin": "@nx/js/typescript",

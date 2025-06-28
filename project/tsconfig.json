@@ -146,6 +146,9 @@
     },
     {
       "path": "./libs/blog/models"
+    },
+    {
+      "path": "./libs/blog/blog-post"
     }
   ]
 }
