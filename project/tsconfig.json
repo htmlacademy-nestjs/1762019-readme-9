@@ -164,6 +164,9 @@
     },
     {
       "path": "./libs/shared/interceptors"
+    },
+    {
+      "path": "./libs/shared/pipes"
     }
   ]
 }

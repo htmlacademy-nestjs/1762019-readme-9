@@ -40,7 +40,8 @@
         "libs/shared/core/*",
         "libs/shared/data-access/*",
         "libs/shared/helpers/*",
-        "libs/shared/interceptors/*"
+        "libs/shared/interceptors/*",
+        "libs/shared/pipes/*"
       ]
     },
     {
@@ -77,7 +78,8 @@
         "libs/shared/core/*",
         "libs/shared/data-access/*",
         "libs/shared/helpers/*",
-        "libs/shared/interceptors/*"
+        "libs/shared/interceptors/*",
+        "libs/shared/pipes/*"
       ],
       "options": {
         "typecheck": {
