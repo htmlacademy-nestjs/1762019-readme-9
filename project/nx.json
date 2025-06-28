@@ -33,7 +33,8 @@
         "libs/user/config/*",
         "libs/user/notification/*",
         "libs/blog/blog-category/*",
-        "libs/blog/blog-comment/*"
+        "libs/blog/blog-comment/*",
+        "libs/blog/models/*"
       ]
     },
     {
@@ -73,6 +74,15 @@
         }
       },
       "exclude": ["libs/blog/blog-post/*"]
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "include": ["libs/blog/models/*"],
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        }
+      }
     }
   ],
   "targetDefaults": {
