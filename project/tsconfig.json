@@ -140,6 +140,9 @@
     },
     {
       "path": "./libs/blog/blog-category"
+    },
+    {
+      "path": "./libs/blog/blog-comment"
     }
   ]
 }
