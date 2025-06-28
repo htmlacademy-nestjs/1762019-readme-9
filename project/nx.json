@@ -41,7 +41,8 @@
         "libs/shared/data-access/*",
         "libs/shared/helpers/*",
         "libs/shared/interceptors/*",
-        "libs/shared/pipes/*"
+        "libs/shared/pipes/*",
+        "libs/file-vault/config/*"
       ]
     },
     {
@@ -79,7 +80,8 @@
         "libs/shared/data-access/*",
         "libs/shared/helpers/*",
         "libs/shared/interceptors/*",
-        "libs/shared/pipes/*"
+        "libs/shared/pipes/*",
+        "libs/file-vault/config/*"
       ],
       "options": {
         "typecheck": {

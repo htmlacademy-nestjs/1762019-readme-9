@@ -176,6 +176,9 @@
     },
     {
       "path": "./libs/file-vault/file-uploader"
+    },
+    {
+      "path": "./libs/file-vault/config"
     }
   ]
 }
