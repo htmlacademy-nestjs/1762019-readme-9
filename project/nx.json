@@ -28,7 +28,8 @@
         "libs/notification-center/email-subscriber/*",
         "libs/notification-center/config/*",
         "libs/bff/config/*",
-        "libs/user/authentication/*"
+        "libs/user/authentication/*",
+        "libs/user/blog-user/*"
       ]
     },
     {
@@ -72,7 +73,6 @@
         "libs/blog/blog-comment/*",
         "libs/blog/blog-category/*",
         "libs/user/notification/*",
-        "libs/user/blog-user/*",
         "libs/user/config/*"
       ]
     }
