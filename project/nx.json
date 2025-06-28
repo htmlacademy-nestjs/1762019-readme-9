@@ -35,7 +35,8 @@
         "libs/blog/blog-category/*",
         "libs/blog/blog-comment/*",
         "libs/blog/models/*",
-        "libs/blog/blog-post/*"
+        "libs/blog/blog-post/*",
+        "libs/shared/configs/*"
       ]
     },
     {
@@ -67,7 +68,8 @@
         "libs/notification-center/email-subscriber/*",
         "libs/notification-center/config/*",
         "libs/user/notification/*",
-        "libs/bff/config/*"
+        "libs/bff/config/*",
+        "libs/shared/configs/*"
       ],
       "options": {
         "typecheck": {
