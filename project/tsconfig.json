@@ -155,6 +155,9 @@
     },
     {
       "path": "./libs/shared/core"
+    },
+    {
+      "path": "./libs/shared/data-access"
     }
   ]
 }

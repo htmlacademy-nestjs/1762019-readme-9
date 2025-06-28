@@ -37,7 +37,8 @@
         "libs/blog/models/*",
         "libs/blog/blog-post/*",
         "libs/shared/configs/*",
-        "libs/shared/core/*"
+        "libs/shared/core/*",
+        "libs/shared/data-access/*"
       ]
     },
     {
@@ -71,7 +72,8 @@
         "libs/user/notification/*",
         "libs/bff/config/*",
         "libs/shared/configs/*",
-        "libs/shared/core/*"
+        "libs/shared/core/*",
+        "libs/shared/data-access/*"
       ],
       "options": {
         "typecheck": {
