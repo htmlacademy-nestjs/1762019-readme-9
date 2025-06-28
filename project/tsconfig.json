@@ -167,6 +167,9 @@
     },
     {
       "path": "./libs/shared/pipes"
+    },
+    {
+      "path": "./libs/notification-center/email-subscriber"
     }
   ]
 }
