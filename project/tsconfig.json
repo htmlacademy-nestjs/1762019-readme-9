@@ -173,6 +173,9 @@
     },
     {
       "path": "./libs/notification-center/config"
+    },
+    {
+      "path": "./libs/file-vault/file-uploader"
     }
   ]
 }
