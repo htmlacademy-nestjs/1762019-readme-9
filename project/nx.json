@@ -30,7 +30,8 @@
         "libs/bff/config/*",
         "libs/user/authentication/*",
         "libs/user/blog-user/*",
-        "libs/user/config/*"
+        "libs/user/config/*",
+        "libs/user/notification/*"
       ]
     },
     {
@@ -72,8 +73,7 @@
       "exclude": [
         "libs/blog/blog-post/*",
         "libs/blog/blog-comment/*",
-        "libs/blog/blog-category/*",
-        "libs/user/notification/*"
+        "libs/blog/blog-category/*"
       ]
     }
   ],

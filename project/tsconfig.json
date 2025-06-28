@@ -131,6 +131,9 @@
     },
     {
       "path": "./libs/user/config"
+    },
+    {
+      "path": "./libs/user/notification"
     }
   ]
 }
